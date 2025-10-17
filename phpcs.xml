@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ruleset name="Lumen Form Request">
+    <description>PHP CodeSniffer configuration for Lumen Form Request package</description>
+
+    <!-- Display progress and use colors -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+
+    <!-- Paths to check -->
+    <file>src</file>
+    <file>tests</file>
+
+    <!-- Use PSR-12 coding standard -->
+    <rule ref="PSR12">
+        <!-- Allow declare(strict_types=1) without blank line after -->
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
+    </rule>
+
+    <!-- Additional rules for better code quality -->
+    
+    <!-- Array formatting -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    
+    <!-- Code analysis -->
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+    
+    <!-- Commenting -->
+    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.Commenting.Fixme"/>
+    
+    <!-- Control structures -->
+    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+    
+    <!-- Files -->
+    <rule ref="Generic.Files.ByteOrderMark"/>
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <!-- Soft limit -->
+            <property name="lineLimit" value="120"/>
+            <!-- Hard limit -->
+            <property name="absoluteLineLimit" value="150"/>
+        </properties>
+    </rule>
+    
+    <!-- Formatting -->
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+    <rule ref="Generic.Formatting.SpaceAfterNot"/>
+    
+    <!-- Naming conventions -->
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    
+    <!-- PHP -->
+    <rule ref="Generic.PHP.BacktickOperator"/>
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+    <rule ref="Generic.PHP.LowerCaseType"/>
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <rule ref="Generic.PHP.SAPIUsage"/>
+    
+    <!-- Strings -->
+    <rule ref="Generic.Strings.UnnecessaryStringConcat">
+        <properties>
+            <property name="allowMultiline" value="true"/>
+        </properties>
+    </rule>
+    
+    <!-- White space -->
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="4"/>
+            <property name="tabIndent" value="false"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.WhiteSpace.SpreadOperatorSpacingAfter"/>
+
+    <!-- Exclude patterns -->
+    <exclude-pattern>*/tests/Pest.php</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/.phpunit.cache/*</exclude-pattern>
+</ruleset>

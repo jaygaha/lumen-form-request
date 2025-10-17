@@ -1,0 +1,62 @@
+{
+    "name": "jaygaha/lumen-form-request",
+    "description": "Form request is a package for Lumen that lets developer validate form requests like Laravel does.",
+    "homepage": "https://github.com/jaygaha/lumen-form-request",
+    "version": "1.0.0",
+    "keywords": [
+        "lumen",
+        "form-request",
+        "validation",
+        "lumen 11",
+        "lumen 12",
+        "php8"
+    ],
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12",
+        "illuminate/validation": "^11.0|^12",
+        "illuminate/http": "^11.0|^12",
+        "illuminate/container": "^11.0|^12",
+        "illuminate/auth": "^11.0|^12"
+    },
+    "require-dev": {
+        "laravel/framework": "^11.0|^12",
+        "mockery/mockery": "^1.6",
+        "pestphp/pest": "^3.8",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JayGaha\\LumenFormRequest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JayGaha\\LumenFormRequest\\Tests\\": "tests"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jay Gaha",
+            "email": "jaygaha@gmail.com",
+            "homepage": "https://jaygaha.com.np",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test:coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage",
+        "lint": "vendor/bin/phpcs",
+        "lint:fix": "vendor/bin/phpcbf"
+    }
+}
