@@ -2,7 +2,6 @@
     "name": "jaygaha/lumen-form-request",
     "description": "Form request is a package for Lumen that lets developer validate form requests like Laravel does.",
     "homepage": "https://github.com/jaygaha/lumen-form-request",
-    "version": "1.0.0",
     "keywords": [
         "lumen",
         "form-request",
