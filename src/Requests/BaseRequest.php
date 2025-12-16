@@ -37,7 +37,7 @@ class BaseRequest extends Request
      * @param  string|null  $param
      * @param  mixed  $default
      */
-    public function route($param = null, $default = null): null|array|string
+    public function route($param = null, $default = null): mixed
     {
         $route = ($this->getRouteResolver())();
 
